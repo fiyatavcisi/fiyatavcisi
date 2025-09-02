@@ -6,13 +6,12 @@ function urunleriGoster(urunler) {
     container.innerHTML = '';
     
     urunler.forEach(urun => {
-        // Rastgele görsel URL'si (placeholder)
-        const resimUrl = `https://picsum.photos/300/200?random=${Math.random()}`;
-        
         const urunHTML = `
             <div class="urun">
                 <div class="urun-resim">
-                    <img src="${resimUrl}" alt="${urun.isim}" onerror="this.src='https://via.placeholder.com/300x200?text=Resim+Yok'">
+                    <img src="${urun.resim || 'https://picsum.photos/300/200?random=' + Math.random()}" 
+                         alt="${urun.isim}" 
+                         onerror="this.src='https://via.placeholder.com/300x200?text=Resim+Yok'">
                 </div>
                 <div class="urun-bilgi">
                     <h3>${urun.isim || 'İsimsiz ürün'}</h3>
