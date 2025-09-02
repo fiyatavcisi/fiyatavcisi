@@ -1,0 +1,26 @@
+name: Fiyat Güncelleme
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Python kurulumu
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Gereksinimleri yükle
+      run: pip install requests beautifulsoup4
+    - name: Fiyatları çek
+      run: python fiyat_cek.py
+    - name: Değişiklikleri kaydet
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add fiyatlar.json
+        git commit -m "Fiyatlar güncellendi: $(date)" || exit 0
+        git push
