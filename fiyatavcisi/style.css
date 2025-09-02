@@ -1,33 +1,72 @@
-.hata {
-    text-align: center;
+.urun {
+    display: flex;
+    flex-direction: column;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px 0;
-    border-left: 5px solid #e74c3c;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
-.hata h3 {
-    color: #e74c3c;
+.urun:hover {
+    transform: translateY(-5px);
+}
+
+.urun-resim {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.urun-resim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.urun:hover .urun-resim img {
+    transform: scale(1.1);
+}
+
+.urun-bilgi {
+    padding: 20px;
+}
+
+.urun-bilgi h3 {
+    color: #2c3e50;
     margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
-.hata p {
+.fiyat {
+    color: #e74c3c;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.magaza, .tarih {
     color: #7f8c8d;
     margin: 5px 0;
+    font-size: 0.9rem;
 }
 
-.hata button {
-    background: #3498db;
+.incele-btn {
+    display: inline-block;
+    background: #27ae60;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
     margin-top: 15px;
-    font-size: 16px;
+    transition: background 0.3s;
+    text-align: center;
+    font-weight: bold;
 }
 
-.hata button:hover {
-    background: #2980b9;
+.incele-btn:hover {
+    background: #219653;
+    transform: translateY(-2px);
 }
