@@ -1,26 +1,38 @@
 name: Fiyat Güncelleme
+
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *'  # Her 6 saatte bir
+  workflow_dispatch:        # Manuel çalıştırma
 
 jobs:
   update-prices:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v2
+    - name: Repository'yi checkout et
+      uses: actions/checkout@v3
+      
     - name: Python kurulumu
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
+        
     - name: Gereksinimleri yükle
       run: pip install requests beautifulsoup4
-    - name: Fiyatları çek
-      run: python fiyat_cek.py
-    - name: Değişiklikleri kaydet
+      
+    - name: Fiyatları çek (Örnek)
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        echo "Fiyat çekme simülasyonu..."
+        echo '[
+          {"isim": "Ürün 1", "fiyat": "100 TL", "magaza": "Trendyol"},
+          {"isim": "Ürün 2", "fiyat": "200 TL", "magaza": "Hepsiburada"}
+        ]' > fiyatlar.json
+        
+    - name: Değişiklikleri commit et
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
         git add fiyatlar.json
-        git commit -m "Fiyatlar güncellendi: $(date)" || exit 0
+        git commit -m "🤖 Otomatik fiyat güncelleme: $(date)" || exit 0
         git push
