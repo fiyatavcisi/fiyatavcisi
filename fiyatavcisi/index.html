@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FiyatAvcısı - En İyi Fırsatlar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🎯 Fiyat Avcısı</h1>
-        <p>En güncel indirimler yükleniyor...</p>
-        <div id="urunler"></div>
+        <header>
+            <h1>🎯 FiyatAvcısı</h1>
+            <p>En iyi fırsatları avlıyoruz!</p>
+        </header>
+        
+        <main>
+            <div class="loading">
+                <p>⏳ Fırsatlar yükleniyor...</p>
+            </div>
+            
+            <div id="urunler" class="urunler"></div>
+        </main>
+
+        <footer>
+            <p>© 2024 FiyatAvcısı - Tüm hakları saklıdır</p>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
