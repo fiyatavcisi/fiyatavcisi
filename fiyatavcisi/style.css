@@ -1,29 +1,33 @@
-.incele-btn {
-    display: inline-block;
-    background: #27ae60;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.3s;
+.hata {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #e74c3c;
 }
 
-.incele-btn:hover {
-    background: #219653;
+.hata h3 {
+    color: #e74c3c;
+    margin-bottom: 10px;
 }
 
-.tarih {
+.hata p {
     color: #7f8c8d;
-    font-size: 0.9rem;
     margin: 5px 0;
 }
 
-.hata {
-    text-align: center;
-    color: #e74c3c;
-    padding: 40px;
-    background: white;
-    border-radius: 10px;
-    grid-column: 1 / -1;
+.hata button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.hata button:hover {
+    background: #2980b9;
 }
