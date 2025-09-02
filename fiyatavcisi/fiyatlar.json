@@ -1,0 +1,23 @@
+[
+  {
+    "isim": "iPhone 13 128GB",
+    "fiyat": "45.999 TL",
+    "magaza": "Trendyol",
+    "link": "https://www.trendyol.com/apple/iphone-13-128-gb-apple-turkiye-garantili-p-67948787",
+    "tarih": "05.01.2024 14:30"
+  },
+  {
+    "isim": "Samsung Galaxy S23",
+    "fiyat": "39.999 TL", 
+    "magaza": "Hepsiburada",
+    "link": "https://www.hepsiburada.com/samsung-galaxy-s23-256-gb-green-pm-p-HBCV00002D7KZ4",
+    "tarih": "05.01.2024 14:30"
+  },
+  {
+    "isim": "Xiaomi Redmi Note 12",
+    "fiyat": "12.999 TL",
+    "magaza": "n11",
+    "link": "https://www.n11.com/telefon/xiaomi-redmi-note-12",
+    "tarih": "05.01.2024 14:30"
+  }
+]
